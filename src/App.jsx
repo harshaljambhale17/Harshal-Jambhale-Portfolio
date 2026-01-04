@@ -76,7 +76,7 @@ export default function Portfolio() {
     }
   ];
 
-  const skills = ['Java', 'Spring Boot', 'REST APIs', 'JWT', 'MySQL', 'MongoDB', 'React', 'Tailwind', 'Git/GitHub', 'GitHub Copilot', 'Docker'];
+  const skills = ['Java', 'Spring Boot', 'REST APIs', 'JWT','J2EE', 'JSP', 'MySQL', 'MongoDB', 'React', 'Tailwind', 'Git/GitHub', 'GitHub Copilot', 'Docker'];
 
   const socials = [
     { name: 'GitHub', icon: Github, url: 'https://github.com/Harshal14753' },
@@ -137,7 +137,7 @@ export default function Portfolio() {
             <div className="mt-8">
               <h4 className="text-sm text-gray-400 uppercase tracking-wide">Top skills</h4>
               <div className="mt-3 flex flex-wrap gap-2">
-                {skills.slice(0,6).map(s => (
+                {skills.slice(0,7).map(s => (
                   <span key={s} className={"px-3 py-1 rounded-full text-sm font-medium " + (dark ? 'bg-gray-800/60 text-gray-100' : 'bg-white shadow text-gray-800') }>{s}</span>
                 ))}
               </div>
