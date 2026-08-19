@@ -304,6 +304,246 @@ function SkillConstellation() {
   );
 }
 
+/* ─── Code Window (career.ts style) ─── */
+function CodeWindow() {
+
+  const codeLines = [
+    { tokens: [
+      { text: 'import', cls: 'text-purple-400' },
+      { text: ' { JavaDeveloper } ', cls: 'text-white' },
+      { text: 'from', cls: 'text-purple-400' },
+      { text: ' "@future/software-engineer"', cls: 'text-emerald-400' },
+      { text: ';', cls: 'text-gray-500' },
+    ]},
+    { tokens: [] },
+    { tokens: [] },
+    { tokens: [
+      { text: 'public', cls: 'text-purple-400' },
+      { text: ' class ', cls: 'text-purple-400' },
+      { text: 'HarshalJambhale', cls: 'text-amber-400' },
+      { text: ' implements ', cls: 'text-purple-400' },
+      { text: 'JavaDeveloper', cls: 'text-cyan-400' },
+      { text: ' {', cls: 'text-gray-400' },
+    ]},
+    { tokens: [] },
+    { tokens: [
+      { text: '    private final', cls: 'text-purple-400' },
+      { text: ' String role = ', cls: 'text-cyan-400' },
+      { text: '"Java Backend Developer"', cls: 'text-emerald-400' },
+      { text: ';', cls: 'text-gray-500' },
+    ]},
+    { tokens: [] },
+    { tokens: [
+      { text: '    private final', cls: 'text-purple-400' },
+      { text: ' String experience = ', cls: 'text-cyan-400' },
+      { text: '"9+ Months Professional Experience"', cls: 'text-emerald-400' },
+      { text: ';', cls: 'text-gray-500' },
+    ]},
+    { tokens: [] },
+    { tokens: [
+      { text: '    public', cls: 'text-purple-400' },
+      { text: ' HiringDecision ', cls: 'text-cyan-400' },
+      { text: 'getHiringDecision', cls: 'text-amber-400' },
+      { text: '() {', cls: 'text-gray-400' },
+    ]},
+    { tokens: [] },
+    { tokens: [
+      { text: '        Candidate candidate = ', cls: 'text-blue-300' },
+      { text: 'new', cls: 'text-purple-400' },
+      { text: ' ', cls: '' },
+      { text: 'Candidate', cls: 'text-cyan-400' },
+      { text: '(', cls: 'text-gray-400' },
+    ]},
+    { tokens: [
+      { text: '            "Harshal Jambhale"', cls: 'text-emerald-400' },
+      { text: ',', cls: 'text-gray-500' },
+      { text: ' role', cls: 'text-blue-300' },
+      { text: ',', cls: 'text-gray-500' },
+    ]},
+    { tokens: [
+      { text: '            experience', cls: 'text-blue-300' },
+      { text: ',', cls: 'text-gray-500' },
+      { text: ' coreSkills', cls: 'text-blue-300' },
+    ]},
+    { tokens: [
+      { text: '        );', cls: 'text-gray-400' },
+    ]},
+    { tokens: [] },
+    { tokens: [
+      { text: '        candidate.', cls: 'text-blue-300' },
+      { text: 'canBuild', cls: 'text-amber-400' },
+      { text: '("Secure REST APIs")', cls: 'text-emerald-400' },
+      { text: ';', cls: 'text-gray-500' },
+    ]},
+    { tokens: [
+      { text: '        candidate.', cls: 'text-blue-300' },
+      { text: 'canDesign', cls: 'text-amber-400' },
+      { text: '("Scalable Backend Systems")', cls: 'text-emerald-400' },
+      { text: ';', cls: 'text-gray-500' },
+    ]},
+    { tokens: [
+      { text: '        candidate.', cls: 'text-blue-300' },
+      { text: 'canImplement', cls: 'text-amber-400' },
+      { text: '("JWT & Role-Based Security")', cls: 'text-emerald-400' },
+      { text: ';', cls: 'text-gray-500' },
+    ]},
+    { tokens: [
+      { text: '        candidate.', cls: 'text-blue-300' },
+      { text: 'canIntegrate', cls: 'text-amber-400' },
+      { text: '("React + Spring Boot")', cls: 'text-emerald-400' },
+      { text: ';', cls: 'text-gray-500' },
+    ]},
+    { tokens: [] },
+    { tokens: [
+      { text: '        return', cls: 'text-purple-400' },
+      { text: ' HiringDecision', cls: 'text-cyan-400' },
+    ]},
+    { tokens: [
+      { text: '            .', cls: 'text-blue-300' },
+      { text: 'forCandidate', cls: 'text-amber-400' },
+      { text: '(candidate)', cls: 'text-blue-300' },
+    ]},
+    { tokens: [
+      { text: '            .', cls: 'text-blue-300' },
+      { text: 'recommend', cls: 'text-amber-400' },
+      { text: '("INTERVIEW")', cls: 'text-emerald-400' },
+      { text: ';', cls: 'text-gray-500' },
+    ]},
+    { tokens: [
+      { text: '    }', cls: 'text-gray-400' },
+    ]},
+    { tokens: [
+      { text: '}', cls: 'text-gray-400' },
+    ]},
+  ];
+
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      {/* Ambient glow behind */}
+      <motion.div
+        animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.16, 0.1] }}
+        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute w-[360px] h-[360px] rounded-full bg-indigo-600 blur-[120px]"
+      />
+      <motion.div
+        animate={{ scale: [1, 1.15, 1], opacity: [0.06, 0.12, 0.06] }}
+        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute w-[240px] h-[240px] rounded-full bg-violet-500 blur-[80px]"
+      />
+
+      {/* Code Window + Buttons wrapper */}
+      <div className="relative flex flex-col items-center">
+        {/* Code Window */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
+          transition={{
+            opacity: { duration: 0.7, delay: 0.3 },
+            scale: { duration: 0.7, delay: 0.3 },
+            y: { duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1.5 },
+          }}
+          className="relative w-[460px] rounded-2xl border border-indigo-500/20 overflow-hidden"
+          style={{
+            background: 'linear-gradient(145deg, #1a1a2e 0%, #12121f 50%, #0f0f1a 100%)',
+            boxShadow: '0 0 80px rgba(99,102,241,0.15), 0 0 40px rgba(139,92,246,0.06), 0 20px 40px rgba(0,0,0,0.5)',
+          }}
+        >
+          {/* Pulsing border glow overlay */}
+          <motion.div
+            animate={{ opacity: [0.2, 0.5, 0.2] }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+            className="absolute inset-0 rounded-2xl pointer-events-none z-20"
+            style={{ border: '1px solid rgba(99,102,241,0.2)', boxShadow: 'inset 0 0 20px rgba(99,102,241,0.04)' }}
+          />
+
+          {/* Title bar */}
+          <div className="flex items-center justify-between px-4 py-3 border-b border-white/5" style={{ background: 'rgba(0,0,0,0.3)' }}>
+            <div className="flex items-center gap-1.5">
+              <div className="w-3 h-3 rounded-full bg-red-500/80 hover:bg-red-500 transition cursor-pointer" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80 hover:bg-yellow-500 transition cursor-pointer" />
+              <div className="w-3 h-3 rounded-full bg-green-500/80 hover:bg-green-500 transition cursor-pointer" />
+            </div>
+            <div className="flex items-center gap-2 text-xs text-gray-500">
+              <span className="text-indigo-400">{'>'}</span>
+              <span className="font-mono">HiringDecision.java</span>
+            </div>
+            <div className="w-12" />
+          </div>
+
+          {/* Code body */}
+          <div className="px-6 py-5 font-mono text-[12px] leading-[1.75] overflow-hidden">
+            {codeLines.map((line, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.35, delay: 0.6 + i * 0.05 }}
+                className="flex hover:bg-white/[0.02] rounded px-1 -mx-1 transition-colors duration-200"
+              >
+                <span className="w-7 text-right text-gray-600 select-none mr-4 shrink-0 tabular-nums">
+                  {line.tokens.length > 0 ? i + 1 : ''}
+                </span>
+                <span className="whitespace-pre">
+                  {line.tokens.map((tok, j) => (
+                    <span key={j} className={tok.cls}>{tok.text}</span>
+                  ))}
+                </span>
+              </motion.div>
+            ))}
+            {/* Blinking cursor */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.5 }}
+              className="flex"
+            >
+              <span className="w-7 mr-4 shrink-0" />
+              <motion.span
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ duration: 1, repeat: Infinity }}
+                className="inline-block w-[2px] h-4 bg-indigo-400"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
+
+
+      </div>
+
+      {/* Floating badges — repositioned for smaller window */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0, y: [0, -5, 0] }}
+        transition={{
+          opacity: { duration: 0.5, delay: 1.5 },
+          x: { duration: 0.5, delay: 1.5 },
+          y: { duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2 },
+        }}
+        className="absolute -right-3 top-14 z-10"
+      >
+        <div className="px-3.5 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-[11px] font-bold tracking-wide backdrop-blur-sm shadow-lg shadow-amber-500/10">
+          ☕ Java Enthusiast ✨
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0, y: [0, 5, 0] }}
+        transition={{
+          opacity: { duration: 0.5, delay: 1.8 },
+          x: { duration: 0.5, delay: 1.8 },
+          y: { duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 2.5 },
+        }}
+        className="absolute -left-3 bottom-14 z-10"
+      >
+        <div className="px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-[11px] font-bold tracking-wide backdrop-blur-sm shadow-lg shadow-cyan-500/10">
+          🚀 Interview Ready
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
 /* ─── Skill Badge ─── */
 function SkillBadge({ name, color }) {
   return (
@@ -651,9 +891,9 @@ export default function Portfolio() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 text-gray-300 font-medium hover:bg-white/5 hover:border-white/20 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-400 text-white font-semibold shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] transition-all duration-300"
               >
-                Get in Touch
+                Hire Me
               </a>
             </motion.div>
 
@@ -694,9 +934,9 @@ export default function Portfolio() {
             </motion.div>
           </div>
 
-          {/* Hero visual — orb only on lg+ */}
+          {/* Hero visual — code window on lg+ */}
           <div className="hidden lg:flex items-center justify-center">
-            <SkillConstellation />
+            <CodeWindow />
           </div>
         </div>
 
